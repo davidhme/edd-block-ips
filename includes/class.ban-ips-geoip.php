@@ -289,7 +289,6 @@ class EDD_Ban_IPs_GeoIP {
 	 */
 	public function is_current_visitor_in_country( $country_code ) {
 		foreach ( $this->get_current_ips() as $ip ) {
-			var_dump( $this->get_country_code_by_ip( $ip ) );
 			if ( $this->get_country_code_by_ip( $ip ) == $country_code ) {
 				return true;
 			}
